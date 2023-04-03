@@ -66,7 +66,7 @@ button.addEventListener('click', function () {
                 console.log(this.innerText);
             });
             griglia.classList.add('griglia')
-            griglia.style.cssText = "border: 5px solid rgb(224, 188, 26); box-shadow: 0 0 25px rgb(224, 122, 26);"
+            griglia.style.cssText = "border: 5px solid rgb(224, 188, 26) !important; box-shadow: 0 0 25px rgb(224, 122, 26);"
             griglia.append(divbox,);
         }
     } else if (difficoltà === 'medium') {
@@ -84,12 +84,12 @@ button.addEventListener('click', function () {
                         const message = "Congratulazioni! Hai Vinto!";
                         displayMessage(message, score);
                     }
-                    this.classList.add('bg_light_green');
-                    console.log(this.innerText);
                 }
                 this.classList.add('bg_light_green');
                 console.log(this.innerText);
             });
+            griglia.classList.add('griglia')
+            griglia.style.cssText = "border: 5px solid rgb(224, 188, 26) !important; box-shadow: 0 0 25px rgb(224, 122, 26);"
             griglia.append(divbox);
         }
     } else if (difficoltà === 'hard') {
@@ -111,6 +111,8 @@ button.addEventListener('click', function () {
                 this.classList.add('bg_light_green');
                 console.log(this.innerText);
             });
+            griglia.classList.add('griglia')
+            griglia.style.cssText = "border: 5px solid rgb(224, 188, 26) !important; box-shadow: 0 0 25px rgb(224, 122, 26);"
             griglia.append(divbox);
         }
     }
@@ -126,6 +128,16 @@ function displayMessage(message, score) {
         scoreElement.innerText = "Score: " + score;
         risultato.appendChild(scoreElement);
     }
+    const resetButton = document.createElement("button");
+    resetButton.innerText = "Reset Level";
+    resetButton.addEventListener("click", function () {
+        griglia.innerHTML = "";
+        griglia.style.cssText = "";
+        button.classList.remove("button");
+        button.click();
+        griglia.classList.add("border", "box-shadow");
+    });
+    risultato.appendChild(resetButton);
     griglia.append(risultato);
 }
 

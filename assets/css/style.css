@@ -1,34 +1,34 @@
-:root{
+:root {
     --bg_black: #333;
     --bg_white: #fff;
     --cellaAttiva: rgb(26, 129, 12);
     --bomba: red;
 }
 
-#viewport{
+#viewport {
     height: 100vh;
 }
 
-header{
+header {
     height: 8vh;
 }
 
-h1{
+h1 {
     font-size: 50px;
     text-shadow: 0 0 5px #219cf3,
-    0 0 8px #219cf3;
+        0 0 8px #219cf3;
 }
 
-main{
+main {
     height: 80vh;
 }
 
-.griglia{
+.griglia {
     max-width: 650px;
     position: relative;
 }
 
-.box{
+.box {
     border: 1px solid rgb(205, 224, 26);
     width: calc(100% / 10);
     height: 65px;
@@ -39,7 +39,8 @@ main{
     text-align: center;
     cursor: pointer;
 }
-.box_medium{
+
+.box_medium {
     border: 1px solid rgb(205, 224, 26);
     width: calc(100% / 9);
     height: 65px;
@@ -50,7 +51,8 @@ main{
     text-align: center;
     cursor: pointer;
 }
-.box_hard{
+
+.box_hard {
     border: 1px solid rgb(205, 224, 26);
     width: calc(100% / 7);
     height: 65px;
@@ -63,52 +65,53 @@ main{
 }
 
 .message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: rgba(0,0,0,0.7);
-  padding: 1rem;
-  border-radius: 1rem;
-  z-index: 100;
-  animation-name: fadeInOut;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 1rem;
+    z-index: 100;
+    animation-name: fadeInOut;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
-
 
 @keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-.bg_light_green{
+.bg_light_green {
     background-color: var(--cellaAttiva);
 }
 
-.bg_red{
+.bg_red {
     background-color: var(--bomba);
 }
 
-.dark_light_mode{
+.dark_light_mode {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.dark_light_mode label{
+.dark_light_mode label {
     position: relative;
     width: 40px;
     height: 40px;
@@ -118,28 +121,29 @@ main{
     cursor: pointer;
 }
 
-.dark_light_mode label input{
+.dark_light_mode label input {
     appearance: none;
 }
 
-.dark_light_mode label span{
+.dark_light_mode label span {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#555353, #363535,#303030);
+    background: linear-gradient(#555353, #363535, #303030);
     border: 2px solid #222;
     border-radius: 6px;
     box-shadow: inset 0 5px 1px rgba(0, 0, 0, 0.35),
-    0 5px 5px rgba(0, 0, 0, 0.5),
-    0 15px 25px rgba(0, 0, 0, 0.35);
+        0 5px 5px rgba(0, 0, 0, 0.5),
+        0 15px 25px rgba(0, 0, 0, 0.35);
 }
 
-.dark_light_mode label input:checked ~ span{
+.dark_light_mode label input:checked~span {
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.35),
-    inset 0 5px 5px rgba(0, 0, 0, 0.5),
-    inset 0 15px 25px rgba(0, 0, 0, 0.35);
+        inset 0 5px 5px rgba(0, 0, 0, 0.5),
+        inset 0 15px 25px rgba(0, 0, 0, 0.35);
 }
-.dark_light_mode label span::before{
+
+.dark_light_mode label span::before {
     content: '';
     position: absolute;
     inset: 5px 3px;
@@ -147,19 +151,19 @@ main{
     filter: blur(2px);
 }
 
-.dark_light_mode label i{
+.dark_light_mode label i {
     position: relative;
     z-index: 10;
     font-size: 1.5rem;
     color: #111;
 }
 
-.dark_light_mode label input:checked ~ i{
+.dark_light_mode label input:checked~i {
     color: #fff;
     text-shadow: 0 0 5px #219cf3,
-    0 0 8px #219cf3;
+        0 0 8px #219cf3;
 }
 
-footer{
+footer {
     height: 8vh;
 }
